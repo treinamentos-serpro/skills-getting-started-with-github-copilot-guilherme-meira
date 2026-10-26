@@ -89,14 +89,48 @@ section h3 {
 }
 
 .participants-list {
-  padding-left: 20px;
+  list-style: none;
+  padding-left: 0;
   color: #444;
   font-size: 14px;
+}
+
+.participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   overflow-wrap: anywhere;
 }
 
 .participants-list li + li {
   margin-top: 3px;
+}
+
+.remove-participant {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  border-radius: 4px;
+  background: transparent;
+  color: #b42318;
+}
+
+.remove-participant svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.remove-participant:hover,
+.remove-participant:focus-visible {
+  background-color: #ffebe9;
+  color: #8f1d14;
 }
 
 .form-group {
